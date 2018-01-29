@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AIPackingListViewController">
+            <connections>
+                <outlet property="buttonMenu" destination="qdW-hW-Gqp" id="4uW-Ux-5Jl"/>
+                <outlet property="menuHeightConstraint" destination="5Pc-ZV-r6p" id="BYx-at-BlE"/>
+                <outlet property="tableView" destination="lHZ-aQ-DmR" id="OZx-kp-RWB"/>
+                <outlet property="titleLabel" destination="zAc-8X-S2s" id="hlm-1J-Q4J"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lHZ-aQ-DmR">
+                    <rect key="frame" x="0.0" y="60" width="375" height="607"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="9Ee-Xb-JtB"/>
+                        <outlet property="delegate" destination="-1" id="PuD-Sl-SUh"/>
+                    </connections>
+                </tableView>
+                <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" translatesAutoresizingMaskIntoConstraints="NO" id="zTn-hb-kAt">
+                    <rect key="frame" x="0.0" y="60" width="375" height="45"/>
+                    <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="Cell" tableViewCell="zTn-hb-kAt" id="ROf-Xa-bzz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44.5"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </tableViewCellContentView>
+                </tableViewCell>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Hn-mK-WYL">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PackingList" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zAc-8X-S2s">
+                            <rect key="frame" x="133" y="17" width="108" height="26"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qdW-hW-Gqp">
+                            <rect key="frame" x="337" y="7" width="30" height="45"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                            <state key="normal" title="+"/>
+                            <connections>
+                                <action selector="onClickMenu:" destination="-1" eventType="touchUpInside" id="7wT-nq-cYc"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w7M-Or-hiM">
+                            <rect key="frame" x="0.0" y="17" width="53" height="24"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="navigationBack"/>
+                            <connections>
+                                <action selector="onClickBack:" destination="-1" eventType="touchUpInside" id="B22-HD-So2"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="5Pc-ZV-r6p"/>
+                        <constraint firstItem="qdW-hW-Gqp" firstAttribute="centerY" secondItem="zAc-8X-S2s" secondAttribute="centerY" id="LJx-Qj-Z7p"/>
+                        <constraint firstAttribute="trailing" secondItem="qdW-hW-Gqp" secondAttribute="trailing" constant="8" id="NUN-Jo-tjh"/>
+                        <constraint firstItem="zAc-8X-S2s" firstAttribute="centerY" secondItem="6Hn-mK-WYL" secondAttribute="centerY" identifier="TitleCenterY" id="Oxx-rl-dVX"/>
+                        <constraint firstItem="zAc-8X-S2s" firstAttribute="centerX" secondItem="6Hn-mK-WYL" secondAttribute="centerX" id="b50-Io-tgl"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="6Hn-mK-WYL" secondAttribute="trailing" id="0Sh-gU-GGK"/>
+                <constraint firstAttribute="trailing" secondItem="zTn-hb-kAt" secondAttribute="trailing" id="QWJ-7b-gq3"/>
+                <constraint firstItem="6Hn-mK-WYL" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Rfh-Nd-2bq"/>
+                <constraint firstAttribute="trailing" secondItem="lHZ-aQ-DmR" secondAttribute="trailing" id="UMU-Ef-2yH"/>
+                <constraint firstItem="lHZ-aQ-DmR" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Z0V-Fd-Ytg"/>
+                <constraint firstItem="lHZ-aQ-DmR" firstAttribute="top" secondItem="6Hn-mK-WYL" secondAttribute="bottom" id="dY8-c8-3hV"/>
+                <constraint firstAttribute="bottom" secondItem="lHZ-aQ-DmR" secondAttribute="bottom" id="fhz-lw-5zg"/>
+                <constraint firstItem="zTn-hb-kAt" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="n2J-ch-cVw"/>
+                <constraint firstItem="zTn-hb-kAt" firstAttribute="top" secondItem="6Hn-mK-WYL" secondAttribute="bottom" id="toG-yW-k4e"/>
+                <constraint firstItem="6Hn-mK-WYL" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="x5n-fu-7lt"/>
+            </constraints>
+            <point key="canvasLocation" x="1062.5" y="80.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="navigationBack" width="24" height="24"/>
+    </resources>
+</document>
